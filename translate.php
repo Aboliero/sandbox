@@ -3,17 +3,16 @@
 /** @var string $morzeWord */
 /** @var string $reverseMorze */
 /** @var string $id */
-/* @var $this yii\web\View */
 /** @var bool $incorrectWord */
 
 use yii\helpers\Html;
-
 $this->title = 'Переводим в морзе';
 ?>
-    <h4><?= Html::encode($this->title) ?></h4>
+
+<h4><?= Html::encode($this->title) ?></h4>
 <?=Html::beginForm(['example/translate'], 'post') ?>
 Введите слово, которое хотите перевести:
-<?= Html::input('text', 'morzeInput', $startWord) ?>
+<?= Html::input('text','morzeInput', $startWord, ['maxlength'=>20]) ?>
 <?= Html::submitButton('Перевести', ['class' => 'submit']) ?>
 <?= Html::endForm() ?>
 <br>
